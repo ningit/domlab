@@ -1,0 +1,34 @@
+{
+	"performance-avoid-endl": {
+		"short": "evita std::endl, imprimir el carácter de salto de línea '\\n' es más eficiente",
+		"extra": "std::endl además de añadir el salto de línea fuerza el volcado inmediato del flujo de datos al archivo o al terminal, que es una operación de entrada/salida costosa",
+		"explains": ["TLE"],
+		"severity": 4
+	},
+	"performance-faster-string-find": {
+		"short": "si buscas un solo carácter, utiliza string::find con un carácter en lugar de una cadena",
+		"extra": "Es más eficiente",
+		"explains": ["TLE"],
+		"severity": 2
+	},
+	"performance-for-range-copy": {
+		"short": "el bucle for de rango está haciendo copia de los elementos",
+		"extra": "Usa un tipo referencia para evitarlo si es posible",
+		"severity": 3
+	},
+	"bugprone-assignment-in-if-condition": {
+		"short": "¿verdaderamente quieres hacer una asignación en el condicional?",
+		"extra": "Es un error habitual confundir el operador de comparación (==) con el de asignación (=)",
+		"explains": ["WA"],
+		"severity": 3
+	},
+	"bugprone-infinite-loop": {
+		"short": "este bucle no termina, revísalo",
+		"explains": ["TLE"],
+		"severity": 7
+	},
+	"readability-const-return-type": {
+		"short": "no tiene sentido ni efecto devolver un tipo valor con el modificador const",
+		"severity": 2
+	}
+}

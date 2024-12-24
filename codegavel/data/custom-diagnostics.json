@@ -1,0 +1,19 @@
+{
+	"nonpod-by-value": {
+		"short": "el argumento de tipo <code>{arg_type}</code> con copia costosa se pasa por valor",
+		"extra": "el paso por valor implica la copia del objeto que se pasa como argumento en cada llamada, usa const & si es posible para evitar operaciones innecesarias",
+		"explains": ["TLE"],
+		"severity": 5
+	},
+	"nonpod-by-value-rec": {
+		"short": "el argumento de tipo <code>{arg_type}</code> con copia costosa se pasa por valor en un contexto recursivo",
+		"extra": "el paso por valor implica la copia del objeto que se pasa como argumento en cada llamada, usa const & si es posible para evitar operaciones innecesarias",
+		"explains": ["TLE"],
+		"severity": 8
+	},
+	"unreachable-func": {
+		"short": "la función o método <code>{fname}</code> nunca es llamada",
+		"extra": "elimina funciones innecesarias de las soluciones salvo que haya una buena razón para mantenerlas",
+		"severity": 1
+	}
+}

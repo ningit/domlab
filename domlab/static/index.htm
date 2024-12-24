@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>DOMside</title>
+	<script src="domlab.js"></script>
+	<link rel="stylesheet" href="domlab.css">
+</head>
+<body onload="startApp()">
+<header id="mainHeader">
+<span id="headerTitle">
+Interfaz a la extensión de DOMjudge
+</span>
+<button id="close-button" class="closeButton" onclick="closeSubject()">
+❌ Cerrar
+</button>
+</header>
+<div class="homeFrame" id="homeFrame">
+Conectando con el servidor...
+</div>
+<div class="mainContent" id="mainFrame">
+<table id="mainTable">
+<thead>
+<tr>
+	<th>Envío</th>
+	<th>Autor del envío</th>
+	<th>Otro autor</th>
+	<th>Laboratorio</th>
+	<th>Puesto</th>
+	<th>Problema</th>
+	<th>Hora</th>
+	<th>Resultado</th>
+	<th>Análisis</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<nav>
+</nav>
+</div>
+<div id="login-modal" class="modal">
+	<div>
+		<div>
+			Acceso al juez <span class="close" onclick="closeModal('login-modal')">❌</span>
+		</div>
+		<table>
+			<tr>
+				<td>Servidor:</td>
+				<td id="lm-server"></td>
+			</tr>
+			<tr>
+				<td>Usuario:</td>
+				<td><input id="lm-username" type="text" autocomplete="username"/></td>
+			</tr>
+			<tr>
+				<td>Contraseña:</td>
+				<td><input id="lm-password" type="password"/></td>
+			</tr>
+		</table>
+		<input type="submit" id="lm-submit" value="Acceder"/>
+	</div>
+</div>
+<div id="message-modal" class="modal">
+	<div>
+		<div>
+			<span id="message-modal-title">Resultado del análisis</span>
+			<span class="close" onclick="closeModal('message-modal')">❌</span>
+		</div>
+		<div id="message-modal-body">
+		</div>
+	</div>
+</div>
+
+<img id="photo" style="display: none;" />
+<footer>
+	<div id="filter-options" style="display: none;">
+	</div>
+	<div id="home-options">
+	<label for="dateselect">Fecha inicial</label>
+	<input type="datetime-local" id="startime-select"/>
+	<label for="dateselect">Fecha final</label>
+	<input type="datetime-local" id="endtime-select"/>
+	</div>
+</footer>
+</body>
+</html>

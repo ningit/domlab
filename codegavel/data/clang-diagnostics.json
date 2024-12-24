@@ -1,0 +1,8 @@
+{
+	"-Warray-bounds": {
+		"short": "se accede al array con un índice que supera su longitud",
+		"explains": ["RTE", "WA"],
+		"severity": 7,
+		"id": "out-of-bounds-static"
+	}
+}

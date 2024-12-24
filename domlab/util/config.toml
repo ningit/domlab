@@ -1,0 +1,21 @@
+# Example configuration
+
+[servers.exserver]
+url = 'https://exserver.domain/domjudge' # URL of the DOMjudge instance
+user = 'domlab' # User with API reader and jury rights
+pass = '1234' # Password for that user
+
+[servers.exserver.subjects.exsubject]
+cid = 'exsubject' # External ID of the contest in the DOMjudge instance
+tag = 'EX' # Tag for detecting coauthors
+
+[database]
+url = 'mongodb://localhost' # URL of the MongoDB database (may include password, etc.)
+
+[general]
+workdir = '/var/run/domlab' # Work directory for storing submission, test cases, etc.
+
+[analyses]
+active = true  # Whether analyses are active
+workers = 1  # Number of worker threads
+compiler-args = ['-DDOMJUDGE']  # Compiler arguments for building the submissions

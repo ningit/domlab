@@ -1,0 +1,12 @@
+[
+	{
+		"match": "signed integer overflow",
+		"info": {
+			"short": "las operaciones aritméticas con enteros han producido desbordamiento",
+			"extra": "comprueba que los tipos utilizados tienen un tamaño adecuado a las restricciones del problema",
+			"explains": ["WA"],
+			"severity": 7,
+			"id": "integer-overflow"
+		}
+	}
+]
